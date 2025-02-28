@@ -12,19 +12,8 @@
 //  then print "user can drive"
 //4-if age is smaller than 16
 //  then print "user can't drive and needs to wait x amount of years"
-public class AgeCalculator
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class AgeCalculator
-     */
-    public AgeCalculator()
-    {
-        // initialise instance variables
-        x = 0;
-    }
+public class AgeCalculator{
+private int currentYear = 2025;
 
     /**
      * An example of a method - replace this comment with your own
@@ -32,9 +21,17 @@ public class AgeCalculator
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public void getAge (int birthYear )
     {
-        // put your code here
-        return x + y;
+        int age = currentYear - birthYear;
+            if (age >= 16){ 
+            System.out.println("User can drive");
+            
+        
     }
+    else {
+        int yearsLeft = 16 - age;
+        System.out.println("User can't drive");
+    }
+}
 }
